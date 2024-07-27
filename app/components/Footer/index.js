@@ -1,7 +1,7 @@
 /** @format */
 
 import React from 'react';
-import logo from 'dan-images/logoCPE.png';
+import logo from 'dan-images/logo-se2.png';
 import logofacebook from 'dan-images/facebook.png';
 import email from 'dan-images/email.png';
 import printer from 'dan-images/printer.png';

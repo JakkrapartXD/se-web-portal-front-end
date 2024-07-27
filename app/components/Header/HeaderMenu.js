@@ -6,7 +6,7 @@ import AppBar from '@mui/material/AppBar';
 import { NavLink } from 'react-router-dom';
 import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
-import logo from 'dan-images/logoCPE.png';
+import logo from 'dan-images/logo-se2.png';
 import brand from 'dan-api/dummy/brand';
 import { Box } from '@mui/material';
 import useMediaQuery from '@mui/material/useMediaQuery';
