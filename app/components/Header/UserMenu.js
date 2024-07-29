@@ -14,16 +14,14 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 // import dummy from 'dan-api/dummy/dummyContents';
 import { Box, Typography } from '@mui/material';
 import { hostBackend, bearerToken } from '../../../env';
+const config = {
+  headers: { Authorization: `Bearer ${bearerToken}` }
+};
 
 // import useStyles from './header-jss';
 
 function UserMenu() {
   // const { classes, cx } = useStyles();
-
-  const config = {
-    headers: { Authorization: `Bearer ${bearerToken}` }
-};
-
   // -------------------- getCookie
   const username = Cookies.get('._jwtUsername');
   const role = Cookies.get('._jwtRole');
