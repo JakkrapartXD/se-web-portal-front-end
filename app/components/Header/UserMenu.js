@@ -13,12 +13,20 @@ import MenuItem from '@mui/material/MenuItem';
 import ListItemIcon from '@mui/material/ListItemIcon';
 // import dummy from 'dan-api/dummy/dummyContents';
 import { Box, Typography } from '@mui/material';
-import { hostBackend } from '../../../env';
+import { hostBackend, bearerToken } from '../../../env';
 
 // import useStyles from './header-jss';
 
 function UserMenu() {
   // const { classes, cx } = useStyles();
+
+  const axiosInstance = axios.create({
+    baseURL: hostBackend,
+    headers: {
+      Authorization: `Bearer ${bearerToken}`,
+      'Content-Type': 'application/json',
+    },
+  });
 
   // -------------------- getCookie
   const username = Cookies.get('._jwtUsername');
@@ -42,7 +50,7 @@ function UserMenu() {
   // ======================== use effect =================================
   // -------------------- verify jwt
   useEffect(() => {
-    axios
+    axiosInstance
       .post(`${hostBackend}/api/verify_authen`, {
         token: username,
         tokenRole: role,

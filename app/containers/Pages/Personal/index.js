@@ -11,7 +11,7 @@ import email from 'dan-images/email.png';
 import telephone from 'dan-images/telephone.png';
 import { GrClose } from 'react-icons/gr';
 import './styles.css';
-import { hostBackend } from '../../../../env';
+import { hostBackend, bearerToken } from '../../../../env';
 
 const style = {
   position: 'absolute',
@@ -26,6 +26,14 @@ const style = {
   p: 4,
   fontFamily: 'Noto Sans Thai',
 };
+
+const axiosInstance = axios.create({
+  baseURL: hostBackend,
+  headers: {
+    Authorization: `Bearer ${bearerToken}`,
+    'Content-Type': 'application/json',
+  },
+});
 
 function personal() {
   const [teacherData, Setteacherdata] = useState([]);
@@ -49,7 +57,7 @@ function personal() {
   // API SELECT teacher by id
   useEffect(() => {
     if (tumbid !== undefined) {
-      axios
+      axiosInstance
         .post(`${hostBackend}/api/ReadTeacherByID`, { id: tumbid })
         .then((response) => Settumbteacher(response.data))
         .catch((error) => {
@@ -61,8 +69,8 @@ function personal() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.post(
-          `${hostBackend}/api/Teacher_list`
+        const response = await axiosInstance.post(
+          `${hostBackend}/api/Teacher_list`,
         );
         if (!checkvalue) {
           Setcheckvalue(true);

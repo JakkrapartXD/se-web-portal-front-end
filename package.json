@@ -158,6 +158,7 @@
     "history": "4.9.0",
     "hoist-non-react-statics": "3.3.0",
     "html-webpack-plugin": "^5.5.0",
+    "https": "^1.0.0",
     "immer": "^9.0.6",
     "immutable": "3.8.2",
     "intl": "1.2.5",

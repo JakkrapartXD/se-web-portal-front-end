@@ -10,7 +10,7 @@ import Cookies from 'js-cookie';
 import axios from 'axios';
 import MainMenu from './MainMenu';
 import useStyles from './sidebar-jss';
-import { hostBackend } from '../../../env';
+import { hostBackend, bearerToken } from '../../../env';
 function SidebarContent(props) {
   const { classes, cx } = useStyles();
   const [transform, setTransform] = useState(0);
@@ -24,9 +24,16 @@ function SidebarContent(props) {
   const username = Cookies.get('._jwtUsername');
   const role = Cookies.get('._jwtRole');
   // ---------------------
+  const axiosInstance = axios.create({
+    baseURL: hostBackend,
+    headers: {
+      Authorization: `Bearer ${bearerToken}`,
+      'Content-Type': 'application/json',
+    },
+  });
   // -------------------- verify jwt
   useEffect(() => {
-    axios
+    axiosInstance
       .post(`${hostBackend}/api/verify_authen`, {
         token: username,
         tokenRole: role,

@@ -14,8 +14,15 @@ import 'react-alice-carousel/lib/alice-carousel.css';
 import useStyles from './index-jss';
 import divider from '../../../public/images/divider.svg';
 import './styles.css';
-import { hostBackend } from '../../../env';
+import { hostBackend, bearerToken } from '../../../env';
 // const handleDragStart = (e) => e.preventDefault();
+const axiosInstance = axios.create({
+  baseURL: hostBackend,
+  headers: {
+    Authorization: `Bearer ${bearerToken}`,
+    'Content-Type': 'application/json',
+  },
+});
 
 function AutoplayCarousel() {
   const { classes } = useStyles();
@@ -27,7 +34,7 @@ function AutoplayCarousel() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.post(
+        const response = await axiosInstance.post(
           `${hostBackend}/api/GetNewlist`,
         );
         const tumbdata = response.data;
