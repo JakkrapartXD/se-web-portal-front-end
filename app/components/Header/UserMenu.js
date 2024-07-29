@@ -20,13 +20,9 @@ import { hostBackend, bearerToken } from '../../../env';
 function UserMenu() {
   // const { classes, cx } = useStyles();
 
-  const axiosInstance = axios.create({
-    baseURL: hostBackend,
-    headers: {
-      Authorization: `Bearer ${bearerToken}`,
-      'Content-Type': 'application/json',
-    },
-  });
+  const config = {
+    headers: { Authorization: `Bearer ${bearerToken}` }
+};
 
   // -------------------- getCookie
   const username = Cookies.get('._jwtUsername');
@@ -50,11 +46,12 @@ function UserMenu() {
   // ======================== use effect =================================
   // -------------------- verify jwt
   useEffect(() => {
-    axiosInstance
+    axios
       .post(`${hostBackend}/api/verify_authen`, {
         token: username,
         tokenRole: role,
-      })
+      }, config
+    )
       .then((data) => {
         setUsername(data.data.User);
         setStatus(data.data.stateRole);
