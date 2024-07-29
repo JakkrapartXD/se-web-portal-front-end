@@ -1,6 +1,6 @@
 const argv = require('./argv');
 
-module.exports = parseInt(argv.port || process.env.PORT || '8080', 10);
+module.exports = parseInt(argv.port || process.env.PORT || '80', 10);
 
 // port 8801 for deploy
 
