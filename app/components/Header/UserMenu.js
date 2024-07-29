@@ -44,6 +44,7 @@ function UserMenu() {
   // ======================== use effect =================================
   // -------------------- verify jwt
   useEffect(() => {
+    console.log(config);
     axios
       .post(`${hostBackend}/api/verify_authen`, {
         token: username,
