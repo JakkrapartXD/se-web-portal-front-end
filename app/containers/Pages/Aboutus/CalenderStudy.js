@@ -7,7 +7,14 @@ import axios from 'axios';
 import './styles.css';
 import PDF from '../../../../public/images/pdf.png';
 import { Footer } from '../../../components';
-import { hostBackend } from '../../../../env';
+import { hostBackend, bearerToken } from '../../../../env';
+const axiosInstance = axios.create({
+  baseURL: hostBackend,
+  headers: {
+    Authorization: `Bearer ${bearerToken}`,
+    'Content-Type': 'application/json',
+  },
+});
 
 function CalenderStudy() {
   const [namefile, Setnamefile] = useState([]);
@@ -16,7 +23,7 @@ function CalenderStudy() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.post(`${hostBackend}/api/GetfilePFD`);
+        const response = await axiosInstance.post(`${hostBackend}/api/GetfilePFD`);
         if (!checkvalue) {
           Setcheckvalue(true);
           Setnamefile(response.data);

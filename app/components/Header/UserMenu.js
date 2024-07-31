@@ -14,10 +14,13 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 // import dummy from 'dan-api/dummy/dummyContents';
 import { Box, Typography } from '@mui/material';
 import { hostBackend, bearerToken } from '../../../env';
-const config = {
-  headers: { Authorization: `Bearer ${bearerToken}` }
-};
-
+const axiosInstance = axios.create({
+  baseURL: hostBackend,
+  headers: {
+    Authorization: `Bearer ${bearerToken}`,
+    'Content-Type': 'application/json',
+  },
+});
 // import useStyles from './header-jss';
 
 function UserMenu() {
@@ -44,11 +47,11 @@ function UserMenu() {
   // ======================== use effect =================================
   // -------------------- verify jwt
   useEffect(() => {
-    axios
+    axiosInstance
       .post(`${hostBackend}/api/verify_authen`, {
         token: username,
         tokenRole: role,
-      }, config
+      }
     )
       .then((data) => {
         setUsername(data.data.User);
@@ -59,7 +62,7 @@ function UserMenu() {
   useEffect(() => {
     if (user !== undefined) {
       if (status === 'นักศึกษา') {
-        axios
+        axiosInstance
           .post(`${hostBackend}/api/ReadStudent`, { username: user })
           .then((data) => {
             Setthumbuser(data.data);
@@ -69,7 +72,7 @@ function UserMenu() {
           });
       }
       if (status === 'อาจารย์') {
-        axios
+        axiosInstance
           .post(`${hostBackend}/api/ReadTeacher`, { username: user })
           .then((data) => {
             const setFristName = data.data[0].first_name;
@@ -79,7 +82,7 @@ function UserMenu() {
           });
       }
       if (status === 'admin') {
-        axios
+        axiosInstance
           .post(`${hostBackend}/api/ReadAdmin`, { username: user })
           .then((data) => {
             const setFristName = data.data[0].first_name;

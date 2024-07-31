@@ -9,7 +9,14 @@ import { useLocation } from 'react-router';
 import Sliderimage from './SilderimageNew';
 import './styles.css';
 import { Footer } from '../../../components';
-import { hostBackend } from '../../../../env';
+import { hostBackend, bearerToken } from '../../../../env';
+const axiosInstance = axios.create({
+  baseURL: hostBackend,
+  headers: {
+    Authorization: `Bearer ${bearerToken}`,
+    'Content-Type': 'application/json',
+  },
+});
 function newdetail() {
   const location = useLocation();
   const [idNews, SetIdNews] = useState();
@@ -24,7 +31,7 @@ function newdetail() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.post(
+        const response = await axiosInstance.post(
           `${hostBackend}/api/listnews_detail`,
           {
             id: newsid,

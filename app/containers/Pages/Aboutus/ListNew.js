@@ -10,7 +10,14 @@ import divider from '../../../../public/images/divider.svg';
 import useStyles from './index-jss';
 import { Footer } from '../../../components';
 import './styles.css';
-import { hostBackend } from '../../../../env';
+import { hostBackend, bearerToken } from '../../../../env';
+const axiosInstance = axios.create({
+  baseURL: hostBackend,
+  headers: {
+    Authorization: `Bearer ${bearerToken}`,
+    'Content-Type': 'application/json',
+  },
+});
 function allNew() {
   const { classes } = useStyles();
   const navigate = useHistory();
@@ -34,7 +41,7 @@ function allNew() {
   }, [newList]);
   // Read New
   useEffect(() => {
-    axios
+    axiosInstance
       .post(`${hostBackend}/api/GetNewlist`)
       .then((data) => {
         SetnewList(data.data);
@@ -61,7 +68,7 @@ function allNew() {
   useEffect(() => {
     // SetviewValue(originnalView + 1);
     if (Isplus === true) {
-      axios
+      axiosInstance
         .post(`${hostBackend}/api/addNewsViewByID`, {
           Id: IdNews,
           View: viewValue,

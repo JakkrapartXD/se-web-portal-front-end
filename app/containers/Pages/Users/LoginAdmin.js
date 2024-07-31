@@ -8,7 +8,14 @@ import { LoginAdminForm } from 'dan-components';
 import useStyles from 'dan-components/Forms/user-jss';
 import Cookies from 'js-cookie';
 import Swal from 'sweetalert2';
-import { hostBackend } from '../../../../env';
+import { hostBackend, bearerToken } from '../../../../env';
+const axiosInstance = axios.create({
+  baseURL: hostBackend,
+  headers: {
+    Authorization: `Bearer ${bearerToken}`,
+    'Content-Type': 'application/json',
+  },
+});
 const now = new Date();
 
 // experis 3 minutes Add 3 minutes (in milliseconds) to the current time
@@ -35,7 +42,7 @@ function LoginAdminPage() {
 
   const submitForm = (values) => {
     console.log(values);
-    axios
+    axiosInstance
       .post(`${hostBackend}/api/authenticationadmin`, {
         username: values.username,
         password: values.password,

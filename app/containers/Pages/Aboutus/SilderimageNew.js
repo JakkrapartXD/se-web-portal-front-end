@@ -5,7 +5,14 @@ import PropTypes from 'prop-types';
 
 import axios from 'axios';
 import useStyles from './index-jss';
-import { hostBackend } from '../../../../env';
+import { hostBackend, bearerToken } from '../../../../env';
+const axiosInstance = axios.create({
+  baseURL: hostBackend,
+  headers: {
+    Authorization: `Bearer ${bearerToken}`,
+    'Content-Type': 'application/json',
+  },
+});
 function showimage(props) {
   const { classes } = useStyles();
   const { idNews } = props;
@@ -17,7 +24,7 @@ function showimage(props) {
       // console.log('idNews', idNews);
       const fetchData = async () => {
         try {
-          const response = await axios.post(
+          const response = await axiosInstance.post(
             `${hostBackend}/api/Getimagesnews`,
             { id: idNews }
           );
