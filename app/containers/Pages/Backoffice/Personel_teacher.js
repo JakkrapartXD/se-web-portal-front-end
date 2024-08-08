@@ -10,7 +10,14 @@ import DialogEducationTeacher from './dialogEducationTeacher';
 import DialogImageTeacher from './dialogImageTeacher';
 import DialogSubjectTeacher from './dialogSubjectTeacher';
 import useStyles from './index-jss';
-import { hostBackend } from '../../../../env';
+import { hostBackend, bearerToken } from '../../../../env';
+const axiosInstance = axios.create({
+  baseURL: hostBackend,
+  headers: {
+    Authorization: `Bearer ${bearerToken}`,
+    'Content-Type': 'application/json',
+  },
+});
 function Personelteacher(props) {
   const { classes } = useStyles();
   const { idrmutl } = props;
@@ -40,7 +47,7 @@ function Personelteacher(props) {
   });
   // fectch Data teacher  --------------------------------
   useEffect(() => {
-    axios
+    axiosInstance
       .post(`${hostBackend}/api/ReadTeacherByEmail`, {
         email: idrmutl,
       })
@@ -53,7 +60,7 @@ function Personelteacher(props) {
   }, [idrmutl]);
   // fetch educate   --------------------------------
   useEffect(() => {
-    axios
+    axiosInstance
       .post(`${hostBackend}/api/ReadEducateTeacherById`, {
         id: thunbID,
       })

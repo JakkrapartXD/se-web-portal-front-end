@@ -16,7 +16,14 @@ import axios from 'axios';
 import Swal from 'sweetalert2';
 import DialogEditNews from './dialogEditNews';
 import DialogAddnews from './dialogAddnews';
-import { hostBackend } from '../../../../../env';
+import { hostBackend, bearerToken } from '../../../../../env';
+const axiosInstance = axios.create({
+  baseURL: hostBackend,
+  headers: {
+    Authorization: `Bearer ${bearerToken}`,
+    'Content-Type': 'application/json',
+  },
+});
 const useStyles = makeStyles()((theme) => ({
   root: {
     width: '100%',
@@ -44,7 +51,7 @@ function newsManagemant() {
 
   // -------------------- verify jwt
   useEffect(() => {
-    axios
+    axiosInstance
       .post(`${hostBackend}/api/verify_authen`, {
         token: username,
         tokenRole: role,
@@ -91,7 +98,7 @@ function newsManagemant() {
   }, [user]);
   //   ==================== fetch Data news
   useEffect(() => {
-    axios.post(`${hostBackend}/api/GetNews`).then((data) => {
+    axiosInstance.post(`${hostBackend}/api/GetNews`).then((data) => {
       setDataNews(data.data);
       setNewsdate(data.data[0].news_date);
     });
@@ -144,7 +151,7 @@ function newsManagemant() {
         })
         .then((result) => {
           if (result.isConfirmed) {
-            axios
+            axiosInstance
               .post(`${hostBackend}/api/DeleteNews`, { id: Id })
               .then((data) => {
                 if (data.status === 200) {

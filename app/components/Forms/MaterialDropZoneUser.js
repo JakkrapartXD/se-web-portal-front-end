@@ -13,7 +13,14 @@ import Snackbar from '@mui/material/Snackbar';
 import CloudUpload from '@mui/icons-material/CloudUpload';
 import 'dan-styles/vendors/react-dropzone/react-dropzone.css';
 import isImage from './helpers/helpers.js';
-import { hostBackend } from '../../../env.js';
+import { hostBackend, bearerToken } from '../../../env.js';
+const axiosInstance = axios.create({
+  baseURL: hostBackend,
+  headers: {
+    Authorization: `Bearer ${bearerToken}`,
+    'Content-Type': 'application/json',
+  },
+});
 
 const useStyles = makeStyles()((theme) => ({
   dropItem: {
@@ -168,7 +175,7 @@ function MaterialDropZoneUser(props) {
           console.log(`Appended image${index}:`, modifiedFile);
         });
         formData.append('owner', idrmutl);
-        axios
+        axiosInstance
           .post(`${hostBackend}/api/uploadimageTeacher`, formData)
           .then((response) => {
             onSucsessForm(response);
@@ -189,7 +196,7 @@ function MaterialDropZoneUser(props) {
           // console.log(`Appended image${index}:`, file);
         });
         formData.append('owner', idrmutl);
-        axios
+        axiosInstance
           .post(`${hostBackend}/api/uploadimageStudent`, formData)
           .then((response) => {
             onSucsessForm(response);

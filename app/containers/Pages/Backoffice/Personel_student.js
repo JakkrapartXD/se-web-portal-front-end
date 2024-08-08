@@ -8,7 +8,14 @@ import Avatar from '@mui/material/Avatar';
 import DialogStudent from './dialogStudent';
 import DialogImageStudent from './dialogImageStudent';
 import useStyles from './index-jss';
-import { hostBackend } from '../../../../env';
+import { hostBackend, bearerToken } from '../../../../env';
+const axiosInstance = axios.create({
+  baseURL: hostBackend,
+  headers: {
+    Authorization: `Bearer ${bearerToken}`,
+    'Content-Type': 'application/json',
+  },
+});
 
 function Personelstudent(props) {
   const { classes } = useStyles();
@@ -21,7 +28,7 @@ function Personelstudent(props) {
   const [ShowImage, SetShowimage] = useState([]);
   //   console.log(username);
   useEffect(() => {
-    axios
+    axiosInstance
       .post(`${hostBackend}/api/ReadStudentByUsername`, {
         username: idrmutl,
       })

@@ -8,7 +8,14 @@ import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
-import { hostBackend } from '../../../../env';
+import { hostBackend, bearerToken } from '../../../../env';
+const axiosInstance = axios.create({
+  baseURL: hostBackend,
+  headers: {
+    Authorization: `Bearer ${bearerToken}`,
+    'Content-Type': 'application/json',
+  },
+});
 
 function DialogSubjectTeacher(props) {
   const {
@@ -41,7 +48,7 @@ function DialogSubjectTeacher(props) {
     SetChageSubject5(Subjectteach5);
   }, [open]);
   const submitForm = (formData) => {
-    axios
+    axiosInstance
       .post(`${hostBackend}/api/UpdateTeacherSubject`, {
         id: idteacher,
         Subjectteach1: formData.selecteSubjectteach1,

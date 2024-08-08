@@ -1,12 +1,19 @@
 import { Card, Typography } from '@mui/material';
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import { hostBackend } from '../../../../env';
+import { hostBackend, bearerToken } from '../../../../env';
+const axiosInstance = axios.create({
+  baseURL: hostBackend,
+  headers: {
+    Authorization: `Bearer ${bearerToken}`,
+    'Content-Type': 'application/json',
+  },
+});
 
 function Report() {
   const [topic, Settopic] = useState('');
   useEffect(() => {
-    axios.post(`${hostBackend}/api/Read_report`).then((data) => {
+    axiosInstance.post(`${hostBackend}/api/Read_report`).then((data) => {
       console.log(data.data);
       Settopic(data.data);
     });

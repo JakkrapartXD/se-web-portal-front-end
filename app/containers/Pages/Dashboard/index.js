@@ -9,7 +9,14 @@ import ShownumberNews from './ShownumberNews';
 import ShownumberTeacher from './ShownumberTeacher';
 import Report from './Report';
 import './styles.css';
-import { hostBackend } from '../../../../env';
+import { hostBackend, bearerToken } from '../../../../env';
+const axiosInstance = axios.create({
+  baseURL: hostBackend,
+  headers: {
+    Authorization: `Bearer ${bearerToken}`,
+    'Content-Type': 'application/json',
+  },
+});
 
 function BasicTable() {
   const [Islogin, Setlogin] = useState(false);
@@ -21,7 +28,7 @@ function BasicTable() {
   const role = Cookies.get('._jwtRole');
   // ===============================
   useEffect(() => {
-    axios
+    axiosInstance
       .post(`${hostBackend}/api/verify_authen`, {
         token: username,
         tokenRole: role,
@@ -47,7 +54,7 @@ function BasicTable() {
   }, []);
   // ========== Read Dashborad
   useEffect(() => {
-    axios.post(`${hostBackend}/api/dashboard`).then((data) => {
+    axiosInstance.post(`${hostBackend}/api/dashboard`).then((data) => {
       Setmaxnews(data.data[2].max_id);
       Setmaxstu(data.data[0].max_id);
       Setmaxtec(data.data[1].max_id);

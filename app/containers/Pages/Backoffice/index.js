@@ -3,7 +3,14 @@ import Cookies from 'js-cookie';
 import axios from 'axios';
 import Personelstudent from './Personel_student';
 import Personelteacher from './Personel_teacher';
-import { hostBackend } from '../../../../env';
+import { hostBackend, bearerToken } from '../../../../env';
+const axiosInstance = axios.create({
+  baseURL: hostBackend,
+  headers: {
+    Authorization: `Bearer ${bearerToken}`,
+    'Content-Type': 'application/json',
+  },
+});
 function Backoffice() {
   const [status, setStatus] = useState('');
   const [name, setName] = useState('');
@@ -15,7 +22,7 @@ function Backoffice() {
   const role = Cookies.get('._jwtRole');
   // ===============================
   useEffect(() => {
-    axios
+    axiosInstance
       .post(`${hostBackend}/api/verify_authen`, {
         token: username,
         tokenRole: role,

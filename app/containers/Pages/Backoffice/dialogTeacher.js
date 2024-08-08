@@ -13,7 +13,14 @@ import Swal from 'sweetalert2';
 import prefixData from '../../../api/dummy/prefixData';
 import religionData from '../../../api/dummy/religionData';
 import nationalityData from '../../../api/dummy/nationalityData';
-import { hostBackend } from '../../../../env';
+import { hostBackend, bearerToken } from '../../../../env';
+const axiosInstance = axios.create({
+  baseURL: hostBackend,
+  headers: {
+    Authorization: `Bearer ${bearerToken}`,
+    'Content-Type': 'application/json',
+  },
+});
 // CommonJS
 function DialogTeacher(props) {
   const {
@@ -75,7 +82,7 @@ function DialogTeacher(props) {
     SetChagePhone(phone);
   }, [open]);
   const submitForm = (formData) => {
-    axios
+    axiosInstance
       .post(`${hostBackend}/api/UpdateTeacher`, {
         id: idteacher,
         prefix: formData.selectePrefix,

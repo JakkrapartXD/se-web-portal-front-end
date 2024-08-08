@@ -4,7 +4,14 @@ import React, { useState } from 'react';
 import axios from 'axios';
 
 import { MaterialDropZone } from '../../../components';
-import { hostBackend } from '../../../../env';
+import { hostBackend, bearerToken } from '../../../../env';
+const axiosInstance = axios.create({
+  baseURL: hostBackend,
+  headers: {
+    Authorization: `Bearer ${bearerToken}`,
+    'Content-Type': 'application/json',
+  },
+});
 function Createfrom() {
   const [files] = useState([]);
   const [imageData, setImageData] = useState();
@@ -12,7 +19,7 @@ function Createfrom() {
 
   const fetchImage = async () => {
     try {
-      const response = await axios.post(`${hostBackend}/api/Readimagenew`);
+      const response = await axiosInstance.post(`${hostBackend}/api/Readimagenew`);
       console.log(response);
       setImageData(response.data);
     } catch (error) {

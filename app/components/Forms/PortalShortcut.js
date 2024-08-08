@@ -6,7 +6,14 @@ import { Box, Button, Typography } from '@mui/material';
 import Cookies from 'js-cookie';
 import axios from 'axios';
 import useStyles from './user-jss';
-import { hostBackend } from '../../../env';
+import { hostBackend, bearerToken } from '../../../env';
+const axiosInstance = axios.create({
+  baseURL: hostBackend,
+  headers: {
+    Authorization: `Bearer ${bearerToken}`,
+    'Content-Type': 'application/json',
+  },
+});
 
 function PortalShortcut() {
   const { classes } = useStyles();
@@ -24,7 +31,7 @@ function PortalShortcut() {
   const dashboard = '/app/pages/dashboard';
   // -------------------- verify jwt
   useEffect(() => {
-    axios
+    axiosInstance
       .post(`${hostBackend}/api/verify_authen`, {
         token: username,
         tokenRole: role,

@@ -12,7 +12,14 @@ import DialogTitle from '@mui/material/DialogTitle';
 import MenuItem from '@mui/material/MenuItem';
 import religionData from '../../../api/dummy/religionData';
 import nationalityData from '../../../api/dummy/nationalityData';
-import { hostBackend } from '../../../../env';
+import { hostBackend, bearerToken } from '../../../../env';
+const axiosInstance = axios.create({
+  baseURL: hostBackend,
+  headers: {
+    Authorization: `Bearer ${bearerToken}`,
+    'Content-Type': 'application/json',
+  },
+});
 
 function DialogStudent(props) {
   const {
@@ -57,7 +64,7 @@ function DialogStudent(props) {
   }, [Status]);
 
   const submitForm = (formData) => {
-    axios
+    axiosInstance
       .post(`${hostBackend}/api/UpdateStudent`, {
         id: idrmutl,
         email: formData.selecteEmail,
