@@ -31,6 +31,10 @@ function PortalShortcut() {
   const dashboard = '/app/pages/dashboard';
   // -------------------- verify jwt
   useEffect(() => {
+    console.log(username);
+    console.log(role);
+    console.log(axiosInstance);
+
     axiosInstance
       .post(`${hostBackend}/api/verify_authen`, {
         token: username,
