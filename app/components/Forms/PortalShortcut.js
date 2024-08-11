@@ -59,7 +59,7 @@ function PortalShortcut() {
     <Fragment>
       <Box textAlign={'center'} marginBottom={8}>
         <Typography fontWeight={600} fontSize={24}>
-          ShortCut Portal Menu
+          ShortCut Portal Menu 1
         </Typography>
       </Box>
       {teacher ? (
