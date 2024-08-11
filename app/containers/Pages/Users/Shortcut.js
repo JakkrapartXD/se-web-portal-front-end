@@ -1,8 +1,8 @@
 /** @format */
 
-import useStyles from 'dan-components/Forms/user-jss';
 import React from 'react';
-import { PortalShortcut } from 'dan-components';
+import useStyles from '../../../components/Forms/user-jss';
+import PortalShortcut from '../../../components/Forms/PortalShortcut';
 
 function Shortcut() {
   const { classes } = useStyles();
