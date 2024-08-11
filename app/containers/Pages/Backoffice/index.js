@@ -22,6 +22,7 @@ function Backoffice() {
   const role = Cookies.get('._jwtRole');
   // ===============================
   useEffect(() => {
+    console.log('verify_authen');
     axiosInstance
       .post(`${hostBackend}/api/verify_authen`, {
         token: username,
