@@ -34,7 +34,6 @@ function PortalShortcut() {
     console.log(username);
     console.log(role);
     console.log(axiosInstance);
-
     axiosInstance
       .post(`${hostBackend}/api/verify_authen`, {
         token: username,
