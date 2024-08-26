@@ -13,8 +13,8 @@ import {
   Bannerregis,
   Plancards,
   Loginstudy,
-  Countsection,
-  ShowProject,
+  // Countsection,
+  // ShowProject,
 } from '../../../components';
 import useStyles from './index-jss';
 
@@ -87,7 +87,7 @@ function Portal() {
       </Box>
       {/* section studyplan end */}
       {/* section Project start */}
-      <section className={classes.section} id='project'>
+      {/* <section className={classes.section} id='project'>
         <Typography
           variant='h4'
           sx={{
@@ -110,11 +110,11 @@ function Portal() {
           }}>
           <ShowProject />
         </Box>
-      </section>
+      </section> */}
       {/* section Project end */}
-      <Box sx={{ width: '100%', height: '388px' }}>
+      {/* <Box sx={{ width: '100%', height: '388px' }}>
         <Countsection />
-      </Box>
+      </Box> */}
       {/* section Carousel start */}
       <section className={classes.sectionspce}>
         <Typography

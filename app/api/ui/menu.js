@@ -14,7 +14,7 @@ module.exports = [
     child: [
       {
         key: 'aboutus_detaill',
-        name: 'ภาควิชาวิศวกรรมคอมพิวเตอร์',
+        name: 'ภาควิชาวิศวกรรมซอฟต์แวร์',
         title: true,
       },
       {

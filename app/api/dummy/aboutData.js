@@ -1,21 +1,25 @@
 /** @format */
+import imageabout from '../../../public/images/about/about5.jpg';
+import imageabout2 from '../../../public/images/about/about2.jpg';
+import imageabout3 from '../../../public/images/about/about3.jpg';
+import imageabout4 from '../../../public/images/about/about4.jpg';
 
 const aboutData = [
   {
     id: '1',
-    imgPath: 'https://sv1.picz.in.th/images/2023/04/04/mcJgZW.jpg',
+    imgPath: imageabout,
   },
   {
     id: '2',
-    imgPath: 'https://sv1.picz.in.th/images/2023/04/04/mcJlda.jpg',
+    imgPath: imageabout2,
   },
   {
     id: '3',
-    imgPath: 'https://sv1.picz.in.th/images/2023/04/04/mcJOQb.jpg',
+    imgPath: imageabout3,
   },
   {
     id: '4',
-    imgPath: 'https://sv1.picz.in.th/images/2023/04/04/mcJqp9.jpg',
+    imgPath: imageabout4,
   },
 ];
 export default aboutData;

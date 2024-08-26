@@ -21,7 +21,7 @@ function Coures() {
             filter: 'drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.1))',
             fontSize: '32px',
           }}>
-          หลักสูตรวิศวกรรมคอมพิวเตอร์
+          หลักสูตรวิศวกรรมซอฟต์แวร์
         </Box>
       </header>
       <section className='section'>
@@ -33,13 +33,7 @@ function Coures() {
           }}>
           หลักสูตรที่เปิดสอน
         </Typography>
-        <Box
-          sx={{
-            marginTop: '2%',
-            height: '800px',
-            display: 'flex',
-            flexDirection: 'column',
-          }}>
+        <Box>
           <CasdShowFaculy />
         </Box>
       </section>

@@ -17,7 +17,7 @@ function Plancards() {
           <img className={classes.imgstyles} src={math} />
           <div className={classes.styletxt}>
             <Typography variant='h5' sx={{ padding: '2px 0px 2px 0px' }}>
-              คณิตศาสตร์ และ ตรรกะ
+            !!ยังไม่ได้แก้!!คณิตศาสตร์ และ ตรรกะ
             </Typography>
             <Typography sx={{ padding: '2px 0px 2px 0px' }}>
               วิชาพื้นฐานที่ควรมีก่อนเรียนวิศวกรรมคอมพิวเตอร์
@@ -36,7 +36,7 @@ function Plancards() {
           <img className={classes.imgstyles} src={logic} />
           <div className={classes.styletxt}>
             <Typography variant='h5' sx={{ margin: '2px 0px 2px 0px' }}>
-              กระบวนการคิด วิเคราะห์
+            !!ยังไม่ได้แก้!!กระบวนการคิด วิเคราะห์
             </Typography>
             <Typography sx={{ padding: '2px 0px 0px 0px' }}>
               รายวิชากระบวนการคิดเป็นอีกหนึ่งวิชาที่จำเป็น
@@ -56,7 +56,7 @@ function Plancards() {
           <img className={classes.imgstyles} src={web} />
           <div className={classes.styletxt}>
             <Typography variant='h5' sx={{ padding: '2px 0px 2px 0px' }}>
-              การเขียนโปรแกรม
+            !!ยังไม่ได้แก้!!การเขียนโปรแกรม
             </Typography>
             <Typography
               sx={{ padding: '2px 0px 2px 0px', wordBreak: 'break-word' }}>

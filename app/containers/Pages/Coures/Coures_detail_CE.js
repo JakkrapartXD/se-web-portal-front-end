@@ -19,7 +19,7 @@ function StrtureOfCoures() {
             marginBottom: '3%',
           }}>
           <Typography fontWeight={500}> หลักสูตรปริญญาตรี</Typography>
-          <Typography fontWeight={300}>วิศวกรรมคอมพิวเตอร์ 4 ปี </Typography>
+          <Typography fontWeight={300}>วิศวกรรมซอฟต์แวร์ 4 ปี </Typography>
         </div>
         <Typography fontWeight={500}> โครงสร้างหลักสูตร</Typography>
         <CardCourseStruture />

@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom';
 import Avatar from '@mui/material/Avatar';
 import brand from 'dan-api/dummy/brand';
-import logo from 'dan-images/logo.png';
+// import logo from 'dan-images/logo-se2.png';
 import Cookies from 'js-cookie';
 import axios from 'axios';
 import MainMenu from './MainMenu';
@@ -134,7 +134,7 @@ function SidebarContent(props) {
             classes.brandBar,
             turnDarker && classes.darker,
           )}>
-          <img src={logo} alt={brand.name} />
+          {/* <img src={logo} alt={brand.name} /> */}
           <Typography>{brand.name}</Typography>
         </NavLink>
         {username ? (

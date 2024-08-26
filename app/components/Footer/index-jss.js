@@ -99,8 +99,8 @@ const useStyles = makeStyles()((theme) => ({
   },
   logostlye: {
     zIndex: 1,
-    width: '40px',
-    height: '40px',
+    width: '50px',
+    height: '50px',
     backgroundColor: '#FFF',
     borderRadius: 20,
     padding: 10,

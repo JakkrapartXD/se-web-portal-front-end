@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { Box, Button } from '@mui/material';
-import freshy from '../../../public/images/freshy.jpg';
+import freshy from '../../../public/images/freshyse.jpg';
 import useStyles from './index-jss';
 
 function Bannerregis() {
@@ -13,7 +13,7 @@ function Bannerregis() {
         <img src={freshy} className={classes.imgbackground} />
         <div className={classes.underimg}></div>
         <Box className={classes.setboxtext}>
-          สมัครเรียนเพื่อเป็นส่วนหนึ่งของครอบครัว CPE กับเรา
+          สมัครเรียนเพื่อเป็นส่วนหนึ่งของวิศวกรรมซอฟต์แวร์ กับเรา
           <div className={classes.buttonRegis}>
             <Button
               href='https://entrance.rmutl.ac.th/main/?fbclid=IwAR3TYzoBX5n7Q0fwD1DGhnfpL3KooHjPiVNXx9vNtCA2o7ZoCARp5-ydh4g'

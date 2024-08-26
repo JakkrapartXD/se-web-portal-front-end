@@ -3,8 +3,8 @@
 import React from 'react';
 import logo from 'dan-images/logo-se2.png';
 import logofacebook from 'dan-images/facebook.png';
-import email from 'dan-images/email.png';
-import printer from 'dan-images/printer.png';
+// import email from 'dan-images/email.png';
+import linelogo from 'dan-images/linelogo2.png';
 import telephone from 'dan-images/telephone.png';
 import { Box, Typography, Stack } from '@mui/material';
 import { Link } from 'react-router-dom';
@@ -116,28 +116,26 @@ export default function Footer() {
               สาขาวิศวกรรมไฟฟ้า
             </Typography>
             <Typography className={classes.txtstlye}>
-              หลักสูตรวิศวกรรมคอมพิวเตอร์
+              หลักสูตรวิศวกรรมซอฟต์แวร์
             </Typography>
           </Box>
           <Box className={classes.txticon}>
             <Stack>
               <Box sx={{ display: 'flex' }}>
                 <img src={logofacebook} className={classes.logostlye} />
-                <span className={classes.txtLogo}>
-                  มหาวิทยาลัยเทคโนโลยีราชมงคลล้านนา
-                </span>
+                <span className={classes.txtLogo}>Software Engineering - RMUTL</span>
               </Box>
-              <Box sx={{ display: 'flex', marginTop: 1 }}>
+              {/* <Box sx={{ display: 'flex', marginTop: 1 }}>
                 <img src={email} className={classes.logostlye} />
-                <span className={classes.txtLogo}>saraban@rmutl.ac.th</span>
-              </Box>
+                <span className={classes.txtLogo}>????@rmutl.ac.th</span>
+              </Box> */}
               <Box sx={{ display: 'flex', marginTop: 1 }}>
                 <img src={telephone} className={classes.logostlye} />
-                <span className={classes.txtLogo}>Phone : 0-5392-1444</span>
+                <span className={classes.txtLogo}>Phone : 05-392-1444</span>
               </Box>
               <Box sx={{ display: 'flex', marginTop: 1 }}>
-                <img src={printer} className={classes.logostlye} />
-                <span className={classes.txtLogo}>Fax : 0-5321-3183</span>
+                <img src={linelogo} className={classes.logostlye} />
+                <span className={classes.txtLogo}>Line : @675vsmtr</span>
               </Box>
             </Stack>
           </Box>
@@ -145,7 +143,7 @@ export default function Footer() {
         {/* colum 3 */}
         <div className={classes.copyright}>
           <Typography className={classes.copyrighttxt}>
-            © 2023 CE-RMUTL | REFROM
+            © 2024 SE-RMUTL | REFROM
           </Typography>
         </div>
       </div>

@@ -10,20 +10,20 @@ import PDF from '../../../public/images/pdf.png';
 AOS.init();
 function CardCourseStruture() {
   const [opennormal, setOpennormal] = React.useState(true);
-  const [openspecific, setspecific] = React.useState(false);
+  // const [openspecific, setspecific] = React.useState(false);
 
   const handleOpen = () => {
     setOpennormal(!opennormal);
   };
-  const handleopenspecific = () => {
-    setspecific(!openspecific);
-  };
+  // const handleopenspecific = () => {
+  //   setspecific(!openspecific);
+  // };
 
   const Submit = () => {
-    const pdfURL = '/Users/baconinhell/Desktop/dandelion-pro_v25/starter-project/Documenets/';
+    const pdfURL = '/images/pdf/SE-REV30_10-4-2566_V3.pdf';
     const link = document.createElement('a');
     link.href = pdfURL;
-    link.download = 'หลักสูตรวิศวกรรมคอม.pdf'; // Specify the desired file name for the downloaded file.
+    link.download = 'มคอ.2_ปี66_วศ.บ.วิศวกรรมซอฟต์แวร์_REV30_10-4-2566_V3.pdf'; // Specify the desired file name for the downloaded file.
     link.target = '_blank'; // Optional: Opens the link in a new tab/window.
 
     // Append the link to the document and programmatically click it to trigger the download.
@@ -50,14 +50,14 @@ function CardCourseStruture() {
           <Typography fontWeight={500}>
             จำนวนหน่วยกิตตลอดหลักสูตร / Total Credits
           </Typography>
-          <Typography fontWeight={500}>135 หน่วยกิต / Credits</Typography>
+          <Typography fontWeight={500}>130 หน่วยกิต / Credits</Typography>
         </div>
         {/* Open Subject */}
         <div className='TextCredits'>
           <Typography fontWeight={500} onClick={handleOpen}>
             หมวดวิชาศึกษาทั่วไป
           </Typography>
-          <Typography fontWeight={500}>30 หน่วยกิต / Credits</Typography>
+          <Typography fontWeight={500}>24 หน่วยกิต / Credits</Typography>
         </div>
         {opennormal ? (
           <div
@@ -65,26 +65,26 @@ function CardCourseStruture() {
             data-aos-duration='2000'
             data-aos-anchor-placement='top-bottom'>
             <div className='subTextCreadit'>
-              <div className='style'>
+              {/* <div className='style'>
                 <Typography fontWeight={500}>วิชาศึกษาทั่วไปบังคับ</Typography>
                 <Typography fontWeight={500}>24 หน่วยกิต / Credits</Typography>
-              </div>
+              </div> */}
               <div className='styleSub'>
                 <Typography>กลุ่มวิชาภาษาและการสื่อสาร</Typography>
-                <Typography>12 หน่วยกิต / Credits</Typography>
+                <Typography>9 หน่วยกิต / Credits</Typography>
               </div>
               <div className='styleSub'>
                 <Typography>กลุ่มวิชาสุขภาพ</Typography>
                 <Typography>3 หน่วยกิต / Credits</Typography>
               </div>
-              <div className='styleSub' style={{ marginBottom: '1%' }}>
+              <div className='styleSub'>
                 <Typography>กลุ่มวิชาบูรณาการ</Typography>
-                <Typography>9 หน่วยกิต / Credits</Typography>
+                <Typography>6 หน่วยกิต / Credits</Typography>
               </div>
-              <div className='style'>
+              {/* <div className='style'>
                 <Typography fontWeight={500}>วิชาศึกษาทั่วไปเลือก</Typography>
                 <Typography fontWeight={500}>6 หน่วยกิต / Credits</Typography>
-              </div>
+              </div> */}
               <div className='styleSub'>
                 <Typography>กลุ่มวิชาสังคมศาสตร์และมนุยศาสตร์</Typography>
                 <Typography>3 หน่วยกิต / Credits</Typography>
@@ -98,12 +98,12 @@ function CardCourseStruture() {
         ) : null}
         {/* Open specific */}
         <div className='TextCredits'>
-          <Typography fontWeight={500} onClick={handleopenspecific}>
+          <Typography fontWeight={500} onClick={handleOpen}>
             หมวดวิชาเฉพาะ
           </Typography>
-          <Typography fontWeight={500}>99 หน่วยกิต / Credits</Typography>
+          <Typography fontWeight={500}>100 หน่วยกิต / Credits</Typography>
         </div>
-        {openspecific ? (
+        {opennormal ? (
           <div
             data-aos='fade-up'
             data-aos-duration='2000'
@@ -112,26 +112,26 @@ function CardCourseStruture() {
               {/* heading */}
               <div className='style'>
                 <Typography fontWeight={500}>
-                  วิชาแกน (กลุ่มวิชาพื้นฐาน)
+                กลุ่มวิชาพื้นฐานวิชาชีพ
                 </Typography>
-                <Typography fontWeight={500}>32 หน่วยกิต / Credits</Typography>
+                <Typography fontWeight={500}>24 หน่วยกิต / Credits</Typography>
               </div>
               {/* subtitle */}
               <div className='styleSub'>
-                <Typography>กลุ่มพื้นฐานทางวิทยาศาสตร์และคณิตศาสตร์</Typography>
-                <Typography>10 หน่วยกิต / Credits</Typography>
+                <Typography>วิชาพื้นฐานทางคณิตศาสตร์และวิศวกรรมศาสตร์</Typography>
+                <Typography>12 หน่วยกิต / Credits</Typography>
               </div>
               <div className='styleSub'>
-                <Typography>กลุ่มพื้นฐานทางวิศวกรรมศาสตร์</Typography>
-                <Typography>22 หน่วยกิต / Credits</Typography>
+                <Typography>วิชาฝึกประสบการณ์ภาคสนาม</Typography>
+                <Typography>12 หน่วยกิต / Credits</Typography>
               </div>
               <div className='style' style={{ marginTop: '1%' }}>
                 <Typography fontWeight={500}>
-                  วิชาเฉพาะด้าน (กลุ่มวิชาชีพบังคับ)
+                  วิชาชีพบังคับ
                 </Typography>
                 <Typography fontWeight={500}>55 หน่วยกิต / Credits</Typography>
               </div>
-              <div className='styleSub'>
+              {/* <div className='styleSub'>
                 <Typography>กลุ่มฮาร์ดและสถาปัตยกรรมคอมพิวเตอร์</Typography>
                 <Typography>14 หน่วยกิต / Credits</Typography>
               </div>
@@ -150,12 +150,12 @@ function CardCourseStruture() {
               <div className='styleSub'>
                 <Typography>กลุ่มฝึกวิชาชีพและโครงงาน</Typography>
                 <Typography>11 หน่วยกิต / Credits</Typography>
-              </div>
+              </div> */}
               <div className='style' style={{ marginTop: '1%' }}>
                 <Typography fontWeight={500}>
-                  วิชาเลือก (กลุ่มวิชาชีพเลือก)
+                  วิชาเลือก
                 </Typography>
-                <Typography fontWeight={500}>12 หน่วยกิต / Credits</Typography>
+                <Typography fontWeight={500}>21 หน่วยกิต / Credits</Typography>
               </div>
             </div>
           </div>
@@ -171,7 +171,7 @@ function CardCourseStruture() {
             <img src={PDF} style={{ padding: '20px' }} />
           </div>
           <div className='Cardpart2'>
-            <Typography>มคอ.2 หลักสูตรวิศวกรรมคอมพิวเตอร์</Typography>
+            <Typography>เล่มหลักสูตร วศบ.ซอฟต์แวร์</Typography>
             <button onClick={() => Submit()}>Download file</button>
           </div>
         </Card>
