@@ -11,7 +11,7 @@ function TextAbout() {
     <div className={classes.position}>
       <div style={{ display: 'flex', flex: '1' }}>
         <div className={classes.divider}></div>
-        <div className={classes.txtstyle}>เกี่ยวกับวิศวกรรมคอมพิวเตอร์</div>
+        <div className={classes.txtstyle}>เกี่ยวกับวิศวกรรมซอฟต์แวร์</div>
       </div>
       <div
         style={{
@@ -26,10 +26,10 @@ function TextAbout() {
               .typeString('RMUTL')
               .pauseFor(5000)
               .deleteChars(5)
-              .typeString('ComputerEngineering')
+              .typeString('Software Engineering')
               .pauseFor(5000)
-              .deleteChars(19)
-              .typeString('RMUTL : ComputerEngineering')
+              .deleteChars(20)
+              .typeString('RMUTL : Software Engineering')
               .start();
           }}
         />
@@ -41,14 +41,7 @@ function TextAbout() {
           marginBottom: 5,
           fontWeight: 300,
         }}>
-        สาขาที่เกี่ยวข้องกับการออกแบบ การสร้างเครื่องหรือระบบคอมพิวเตอร์
-        และรวมถึงการบำรุงรักษาระบบคอมพิวเตอร์ อีกด้วย โดยเนื้อหาที่น้อง ๆ
-        จะได้เรียนจะมีทั้งด้านฮาร์ดแวร์ ซอฟต์แวร์ และการสื่อสาร
-        ควบคู่กับความรู้ทาง
-        ด้านวิศวกรรมหลักสูตรการเรียนการสอนจะมุ่งเน้นทางด้านทฤษฎี และการฝึกฝน
-        ปฏิบัติของทางด้านวิศวกรรมไฟฟ้า คณิตศาสตร์ และวิทยาศาสตร์
-        รวมถึงการประยุกต์เข้ากับปัญหาทางด้านการออกแบบคอมพิวเตอร์
-        และอุปกรณ์ที่ใช้คอมพิวเตอร์ให้สามารถทำงานร่วมกันได้อย่างมีประสิทธิภาพ
+        วิศวกรรมซอฟต์แวร์ (SE) เป็นสาขาวิชาวิศวกรรมที่เกี่ยวข้องกับการผลิตซอฟต์แวร์ทุกด้าน รวมถึงการวิเคราะห์ซอฟต์แวร์ การออกแบบ การพัฒนา การทดสอบ และการใช้งาน SE ต้องการการคิดเชิงนามธรรมและเชิงตรรกะที่ลึกซึ้ง และการประยุกต์ใช้คณิตศาสตร์ ตรรกะ และวิทยาการคอมพิวเตอร์ เพื่อผลิตซอฟต์แวร์ที่มีประสิทธิภาพและเชื่อถือได้ด้วยทรัพยากรที่มีอยู่.
       </Typography>
       <Box className={classes.buttonstyles}>
         <Button variant='contained' className={classes.Button} href='/aboutus'>

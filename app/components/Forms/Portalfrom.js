@@ -9,7 +9,7 @@ import Typography from '@mui/material/Typography';
 import Paper from '@mui/material/Paper';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import brand from 'dan-api/dummy/brand';
-import logo from 'dan-images/logoCPE.png';
+import logo from 'dan-images/logo-se2.png';
 // import student from 'dan-images/student.png';
 // import teacher from 'dan-images/teacher.png';
 // import cooperative from 'dan-images/cooperative.png';

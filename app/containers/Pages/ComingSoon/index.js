@@ -23,7 +23,7 @@ function ComingSoon(props) {
     setEmail(event.target.value);
   };
 
-  const title = brand.name + ' - Coming Soon';
+  const title = brand.name;
   const description = brand.desc;
   return (
     <div className={classes.rootFull}>

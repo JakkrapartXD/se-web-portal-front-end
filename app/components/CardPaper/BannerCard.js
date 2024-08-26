@@ -2,7 +2,7 @@
 
 import React from 'react';
 import useStyles from './cardStyle-jss';
-import imagebanner from '../../../public/images/rootbanner.svg';
+import imagebanner from '../../../public/images/bannerv.3.png';
 function BannerCard() {
   const { classes } = useStyles();
   return (

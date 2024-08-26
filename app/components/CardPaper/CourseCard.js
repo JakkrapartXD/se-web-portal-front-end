@@ -41,11 +41,11 @@ function Curriculum(props) {
         <Grid
           sx={{
             marginTop: -5,
-            width: 100,
-            height: 100,
-            padding: 2.5,
-            backgroundColor: '#543C6C',
-            borderRadius: 55,
+            width: 120,
+            height: 120,
+            padding: 0.8,
+            backgroundColor: '#fffff0',
+            borderRadius: 50,
             gap: '2rem',
           }}>
           <img src={temppathimg} />

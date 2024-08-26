@@ -15,10 +15,10 @@ import {
   RiStarFill,
 } from 'react-icons/ri';
 import timelineData from '../../api/dummy/timeline';
-import round1image from '../../../public/images/tcas/round1.png';
-import round2image from '../../../public/images/tcas/round2.png';
-import round3image from '../../../public/images/tcas/round3.png';
-import round4image from '../../../public/images/tcas/round4.png';
+import round1image from '../../../public/images/tcas/P1.png';
+import round2image from '../../../public/images/tcas/P2.png';
+import round3image from '../../../public/images/tcas/P3.png';
+import round4image from '../../../public/images/tcas/P4.png';
 
 // console.log(timelineData[0].subtitle);
 import useStyles from './index-jss';
