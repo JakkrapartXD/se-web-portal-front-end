@@ -43,8 +43,8 @@ function Application(props) {
         <Route exact path='/aboutus/allNew' component={allNew} />
         <Route path='/aboutus/detail' component={newdetail} />
         <Route path='/Coures' component={Coures} />
-        <Route path='/Coures-CPE' component={StrutureCE} />
-        <Route path='/Coures-CPE-detail' component={StrtureOfCoures} />
+        <Route path='/Coures-SE' component={StrutureCE} />
+        <Route path='/Coures-SE-detail' component={StrtureOfCoures} />
         <Route path='/Contact-us' component={contactus} />
         <Route path='/Backoffice/personel' component={Backoffice} />
         <Route path='/Cooperative' component={CooperativeFrom} />

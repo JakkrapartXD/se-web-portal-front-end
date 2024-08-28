@@ -52,7 +52,7 @@ function Bannercurri() {
             <br />
             3. สามารถควบคุมและตรวจสอบคุณภาพของการพัฒนาซอฟต์แวร์ได้อย่างเป็นระบบ
           </Typography>
-            <Button href='/Coures-CPE' className={classes.buttonstyles1}>
+            <Button href='/Coures-SE' className={classes.buttonstyles1}>
               LEAN MORE
             </Button>
           </Box>
