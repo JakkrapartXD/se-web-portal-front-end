@@ -113,7 +113,7 @@ function personal() {
             background:
               'linear-gradient(94deg, rgba(255,155,123,1) 46%, rgba(254,111,65,1) 50%)',
             backgroundClip: 'text',
-            color: 'transparent',
+            color: 'blue',
             fontWeight: 600,
             filter: 'drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.1))',
             fontSize: '32px',

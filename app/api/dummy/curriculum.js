@@ -7,7 +7,7 @@ const curriculum = [
     title: 'ปริญญาตรี',
     subtitle: 'วศ.บ.ซอฟต์แวร์ 4 ปี',
     imgPath: imagelogo,
-    link: '/app/pages/ComingSoon',
+    link: '/Coures-SE',
   },
 ];
 

@@ -22,7 +22,7 @@ function contactus() {
             background:
               'linear-gradient(94deg, rgba(255,155,123,1) 47%, rgba(254,111,65,1) 48%)',
             backgroundClip: 'text',
-            color: 'transparent',
+            color: 'blue',
             fontWeight: 700,
             filter: 'drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15))',
             marginBottom: '20px',

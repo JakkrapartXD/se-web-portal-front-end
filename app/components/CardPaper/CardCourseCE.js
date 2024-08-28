@@ -63,7 +63,7 @@ function CasdShowFaculy() {
             หมายเหตุ : เหมาะสำหรับ นักศึกษา ที่สำเร็จการศึกษาระดับ ม.6/ ปวช.
             /ปวส.
           </Typography>
-          <Button href='/Coures-CPE' style={{ color: '#FE6439' }}>
+          <Button href='/Coures-SE' style={{ color: '#FE6439' }}>
             เข้าดูหลักสูตรเพิ่มเติม
           </Button>
         </Box>

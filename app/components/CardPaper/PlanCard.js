@@ -17,16 +17,13 @@ function Plancards() {
           <img className={classes.imgstyles} src={math} />
           <div className={classes.styletxt}>
             <Typography variant='h5' sx={{ padding: '2px 0px 2px 0px' }}>
-            !!ยังไม่ได้แก้!!คณิตศาสตร์ และ ตรรกะ
+            คณิตศาสตร์ และ ตรรกะ
             </Typography>
             <Typography sx={{ padding: '2px 0px 2px 0px' }}>
-              วิชาพื้นฐานที่ควรมีก่อนเรียนวิศวกรรมคอมพิวเตอร์
+              เป็นพื้นฐานที่ควรมีก่อนเรียนวิศวกรรมซอฟต์แวร์
+               เพราะมีความจำเป็นที่ต้องได้ใช้เรียน เช่น
               <div style={{ color: '#716F6F' }}>
-                แคลคูลัส พื้นฐาน ฟิสิกส์ พื้นฐาน
-              </div>
-              ตัวอย่างรายวิชาที่เป็นตัวต่อ แคลคูลัส และฟิสิกส์
-              <div style={{ color: '#716F6F' }}>
-                กลศาสตร์วิศวกรรม คณิตศาสตร์วิศวกรรมไฟฟ้า
+              ความน่าจะเป็นและสถิติในงานวิศวกรรม, คณิตศาสตร์ดิสครีต เป็นต้น
               </div>
             </Typography>
           </div>
@@ -36,17 +33,17 @@ function Plancards() {
           <img className={classes.imgstyles} src={logic} />
           <div className={classes.styletxt}>
             <Typography variant='h5' sx={{ margin: '2px 0px 2px 0px' }}>
-            !!ยังไม่ได้แก้!!กระบวนการคิด วิเคราะห์
+            กระบวนการคิด วิเคราะห์
             </Typography>
             <Typography sx={{ padding: '2px 0px 0px 0px' }}>
-              รายวิชากระบวนการคิดเป็นอีกหนึ่งวิชาที่จำเป็น
+              กระบวนการคิดเป็นอีกหนึ่งวิชาที่จำเป็น
               <br />
-              ต้องได้เรียนเมื่อมาเรียนวิศวกรรมคอมพิวเตอร์
+              ต้องได้เรียนเมื่อมาเรียนวิศวกรรมซอฟต์แวร์
               <br />
               เพราะเป็นรายวิชาบังคับที่ต้องเรียนตามหลักสูตร เช่น{' '}
               <div style={{ color: '#716F6F' }}>
-                วิชา กระบวนการคิดและการแก้ปัญหา <br />
-                ศิลปะการใช้ชีวิต เป็นต้น
+                วิชา กระบวนการซอฟต์แวร์และการประกันคุณภาพ, <br />
+                การกำหนดความต้องการและการออกแบบทางซอฟต์แวร์ เป็นต้น
               </div>
             </Typography>
           </div>
@@ -56,19 +53,19 @@ function Plancards() {
           <img className={classes.imgstyles} src={web} />
           <div className={classes.styletxt}>
             <Typography variant='h5' sx={{ padding: '2px 0px 2px 0px' }}>
-            !!ยังไม่ได้แก้!!การเขียนโปรแกรม
+            การเขียนโปรแกรม
             </Typography>
             <Typography
               sx={{ padding: '2px 0px 2px 0px', wordBreak: 'break-word' }}>
               พื้นฐานที่ควรมีเบื้งต้นเมื่อมาเรียน เช่น <br />
               <div style={{ color: '#716F6F' }}>
-                ภาษา C, C# , C++ , JavaScript เป็นต้น
+                ภาษา C++ , JavaScript เป็นต้น
                 <br />
               </div>
               เพราะมีความจำเป็นที่ต้องได้ใช้เรียนเป็นอย่างมาก <br />
               ในหลายวิชา เช่น
               <div style={{ color: '#716F6F' }}>
-                วิชา การเขียนโปรแกรมคอมพิวเตอร์ การเขียนโปรแกรมเชิงวัตถุ เป็นต้น
+                วิชา การเขียนโปรแกรมคอมพิวเตอร์, การเขียนโปรแกรมสำหรับวิศวกรรมซอฟต์แวร์ เป็นต้น
               </div>
             </Typography>
           </div>

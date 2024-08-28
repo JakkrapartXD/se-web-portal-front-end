@@ -18,22 +18,22 @@ function Basicsubject() {
         <div className='stylesbasicsubject'>
           <img src={iconsub1} />
           <div className='txtstyles'>
-            <span>Basic Programming</span>
-            <span>พื้นฐานการเขียนโปรแกรม</span>
+            <span>Introduction to Software engineering</span>
+            <span>วิศวกรรมซอฟต์แวร์เบี้องต้น</span>
           </div>
         </div>
         <div className='stylesbasicsubject'>
           <img src={iconsub2} />
           <div className='txtstyles'>
-            <span>Mathematical for Computer</span>
-            <span>คณิตศาสตร์ทางคอมพิวเตอร์</span>
+            <span>Discrete Mathematical</span>
+            <span>คณิตศาสตร์ดิสครีต</span>
           </div>
         </div>
         <div className='stylesbasicsubject'>
           <img src={iconsub3} />
           <div className='txtstyles'>
-            <span>Digital Circuits and Logic Design</span>
-            <span>วงจรดิจิทัลและการออกแบบลอจิก</span>
+            <span>Computer Architecture and Organization</span>
+            <span>โครงสร้างและสถาปัตยกรรมคอมพิวเตอร์</span>
           </div>
         </div>
       </div>
@@ -42,21 +42,21 @@ function Basicsubject() {
           <img src={iconsub4} />
           <div className='txtstyles'>
             <span>Data Structures and Algorithms</span>
-            <span>โครงสร้างข้อมูลและอัลกอริทึม</span>
+            <span>โครงสร้างข้อมูลและขั้นตอนวิธี</span>
           </div>
         </div>
         <div className='stylesbasicsubject'>
           <img src={iconsub5} />
           <div className='txtstyles'>
-            <span>Computer architecture </span>
-            <span>สถาปัตยกรรมคอมพิวเตอร์</span>
+            <span>Software architecture </span>
+            <span>สถาปัตยกรรมซอฟต์แวร์</span>
           </div>
         </div>
         <div className='stylesbasicsubject'>
           <img src={iconsub6} />
           <div className='txtstyles'>
-            <span>Computer Network</span>
-            <span>เครือข่ายคอมพิวเตอร์</span>
+            <span>Data Communication and Network</span>
+            <span>การสื่อสารข้อมูลและเครือข่าย</span>
           </div>
         </div>
       </div>
@@ -64,8 +64,8 @@ function Basicsubject() {
         <div className='stylesbasicsubject'>
           <img src={iconsub7} />
           <div className='txtstyles'>
-            <span>Computer Securitys</span>
-            <span>ความมั่นคงปลอดภัยของคอมพิวเตอร์</span>
+            <span>Laws and Ethics in information to Software engineering</span>
+            <span>กฎหมายและจริยธรรมด้านเทคโนโลยีสารสนเทศ</span>
           </div>
         </div>
         <div className='stylesbasicsubject'>
@@ -78,8 +78,8 @@ function Basicsubject() {
         <div className='stylesbasicsubject'>
           <img src={iconsub9} />
           <div className='txtstyles'>
-            <span>Operating System</span>
-            <span>ระบบปฏิบัติการ</span>
+            <span>Operating System & Server Configure</span>
+            <span>ระบบปฏิบัติการและการจัดโครงแบบเครื่องแม่ข่าย</span>
           </div>
         </div>
       </div>
